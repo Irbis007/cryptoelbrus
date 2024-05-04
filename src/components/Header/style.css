@@ -1,0 +1,97 @@
+
+
+.header{
+  position: relative;
+  width: 100%;
+  height: 165px;
+  background-color: #1C67F6;
+}
+
+.header .container{
+  padding: 16px 24px 65px;
+}
+
+.deckor{
+  position: absolute;
+  transition: left, top, .4s;
+}
+
+.deckor::after, .deckor::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  transition: border-radius, width, height, .4s;
+}
+
+.deckor__active::after, .deckor__active::before{
+  border-radius: 10px;
+}
+
+.deckor::before{
+  width: 171px;
+  height: 171px;
+}
+.deckor::after{
+  width: 139px;
+  height: 139px;
+}
+
+.deckor__active::before{
+  width: 138px;
+  height: 88px;
+}
+.deckor__active::after{
+  width: 100px;
+  height: 64px;
+}
+
+.deckor-1{
+  left: -12.5px;
+  top: -29.5px;
+}
+
+.deckor-2{
+  right: 10.5px;
+  bottom: 19.5px;
+}
+
+.deckor__active.deckor-1{
+  left: 6px;
+  top: -12px;
+}
+
+.deckor__active.deckor-2{
+  right: 4px;
+  bottom: 46px;
+}
+
+.header__top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image{
+  padding: 18px;
+}
+
+.settings__icon{
+  padding: 17px;
+  width: 58px;
+  height: 58px;
+  background-color: transparent;
+  border: none;
+}
+
+.header__body{
+  margin-top: 16px;
+  color: #fff;
+}
+
+
+:is(.header) .close::before, .close::after{
+  background-color: #fff;
+}

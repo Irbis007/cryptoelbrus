@@ -1,0 +1,44 @@
+
+
+.select{
+  padding: 16px;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.select__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select__left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select__body{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows, .3s;
+}
+
+.select_active .select__body{
+
+  grid-template-rows: 1fr;
+}
+
+.select__content{
+  min-height: 0;
+}
+
+.select__arrow{
+  height: 24px;
+  transition: transform, .3s;
+}
+
+.select_active .select__arrow{
+  transform: rotate(180deg);
+}

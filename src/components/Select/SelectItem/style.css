@@ -1,0 +1,40 @@
+
+
+.select__item{
+  margin-top: 16px;
+}
+
+.item__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .04);
+}
+
+.select__item:last-child .item__top{
+  border: none;
+}
+
+.item__body{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows, .3s;
+  overflow: hidden;
+}
+
+.select__item_active .item__body{
+  grid-template-rows: 1fr;
+}
+
+.item__content{
+  min-height: 0;
+}
+
+.item__plus{
+  transition: transform, .3s;
+}
+
+.select__item_active .item__plus{
+  transform: rotate(45deg);
+}
