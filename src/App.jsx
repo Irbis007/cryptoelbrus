@@ -22,12 +22,14 @@ function App() {
   return (
     <>
       <Header lang={isRussian} setPage={setPage} isSettings={isSettings} />
-      <div className="content">
-        {!isSettings ? (
-          <MainPage lang={isRussian}/>
-        ) : (
-          <Settings lang={isRussian} setLang={setLang} sort={isSort} setSort={setSort} />
-        )}
+      <div className="container">
+        <div className="content">
+          {!isSettings ? (
+            <MainPage lang={isRussian} />
+          ) : (
+            <Settings lang={isRussian} setLang={setLang} sort={isSort} setSort={setSort} />
+          )}
+        </div>
       </div>
     </>
   );
